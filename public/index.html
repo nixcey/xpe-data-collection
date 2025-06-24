@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Valorant Scoreboard Uploader</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="container">
+  <h1>Upload Valorant Scoreboard Image</h1>
+  <form id="uploadForm">
+    <input type="file" name="scoreboard" id="scoreboard" accept="image/*" required />
+    <button type="submit">Upload</button>
+  </form>
+
+  <section id="result" class="hidden">
+    <h2>Extracted Data</h2>
+    <p><strong>Map:</strong> <span id="mapName"></span></p>
+
+    <table id="scoreboardTable">
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>ACS</th>
+          <th>K</th>
+          <th>D</th>
+          <th>A</th>
+          <th>ECON</th>
+          <th>First Bloods</th>
+          <th>Plants</th>
+          <th>Defuses</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+
+
+  <section id="teamStatsSection">
+    <h2>Team Stats</h2>
+    <button id="loadMaleBtn">Load Male Team Stats</button>
+    <button id="loadFemaleBtn">Load Female Team Stats</button>
+
+    <div id="maleStats" class="hidden">
+      <h3>Male Team Players</h3>
+      <table id="malePlayersTable" class="hidden">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Games Played</th>
+            <th>Avg ACS</th>
+            <th>Avg Kills</th>
+            <th>Avg Deaths</th>
+            <th>Avg Assists</th>
+            <th>Avg Econ</th>
+            <th>Avg First Bloods</th>
+            <th>Avg Plants</th>
+            <th>Avg Defuses</th>
+            <th>Wins</th>
+            <th>Losses</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <h3>Male Team Map Stats</h3>
+      <table id="maleMapStatsTable" class="hidden">
+        <thead>
+          <tr>
+            <th>Map</th>
+            <th>Total Wins</th>
+            <th>Total Losses</th>
+            <th>Total Round Wins</th>
+            <th>Total Round Losses</th>
+            <th>W/L %</th>
+            <th>Round W/L %</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="femaleStats" class="hidden">
+      <h3>Female Team Players</h3>
+      <table id="femalePlayersTable" class="hidden">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Games Played</th>
+            <th>Avg ACS</th>
+            <th>Avg Kills</th>
+            <th>Avg Deaths</th>
+            <th>Avg Assists</th>
+            <th>Avg Econ</th>
+            <th>Avg First Bloods</th>
+            <th>Avg Plants</th>
+            <th>Avg Defuses</th>
+            <th>Wins</th>
+            <th>Losses</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <h3>Female Team Map Stats</h3>
+      <table id="femaleMapStatsTable" class="hidden">
+        <thead>
+          <tr>
+            <th>Map</th>
+            <th>Total Wins</th>
+            <th>Total Losses</th>
+            <th>Total Round Wins</th>
+            <th>Total Round Losses</th>
+            <th>W/L %</th>
+            <th>Round W/L %</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
