@@ -137,7 +137,7 @@ def extract_scoreboard(image_path):
     col_min_x = min(c[0] for c in scaled_columns.values())
     col_max_x = max(c[1] for c in scaled_columns.values())
     scoreboard_width = col_max_x - col_min_x
-    scoreboard_height = row_spacing * NUM_ROWS
+    scoreboard_height = (row_spacing * NUM_ROWS) + 20
 
     bbox_x1 = origin_x
     bbox_y1 = origin_y
